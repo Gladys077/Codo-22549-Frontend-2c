@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*selector hijo*/
+        p > strong {
+            color: red;
+        }
+        div > img {
+            width: 300px;
+        }
+        div.div1 p {
+            font-size: 25px;
+        }
+        
+    /*Hermanos Adyacentes tag + tag*/
+        h1 + p {
+            font-weight: bolder;
+            color: blue
+        }
+        
+    /*Hermanos Generales tag ~ tag*/
+    h2 ~ p {
+            font-weight: bolder;
+            color: blue;
+        }
+
+    /*pseudoclases*/
+    a:visited{
+        color: brown;
+    }
+    a:active{
+        color: turquoise;
+    }
+
+    a:hover{
+        font-family: Verdana;
+    }
+
+    img:hover{
+        width: 600px;
+        border: 5px solid yellow;
+    }
+
+    input:checked{
+        margin: 15px;
+    }
+
+    div.primerHijo{
+        text-align: center;
+    }
+
+    div.primerHijo p{
+        display: inline;
+    }
+
+    /*first child*/
+    div.primerHijo p:first-child{
+        font-weight: bolder;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        Selector de hijos <strong>PADRES > HIJOS</strong>
+    </p>
+    <p>
+        texto <strong>texto strong</strong> siguiente texto
+    </p>
+    <div class="div1">
+        <img src="paisaje.jpg">
+        <p>parrafo</p>
+    </div>
+
+<!--Hermanos Adyacentes-->
+<div>
+    <h1>Hermanos Adyacentes</h1>
+    <p>
+        texto 1
+    </p>
+    <p>
+        texto 2
+    </p>
+    <p>
+        texto 3
+    </p>
+
+
+<!--Hermanos Generales-->
+<div>
+    <h2>Hermanos Generales</h2>
+    <p>
+        Hermano 1 de h2
+    </p>
+    <p>
+        Hermano 2 de h2
+    </p>
+    <p>
+        Hermano 3 de h2
+    </p>
+</div>
+
+<div>
+    <h1>Pseudoclases</h1>
+    <a href="https://www.google.com.ar">www.google.com</a>
+    <a href="https://www.duolingo.com.ar">www.duolingo.com</a>
+</div>
+<div>
+    <input type="checkbox">
+</div>
+<div class="primerHijo">
+    <p>
+        P1        
+    </p>
+    <p>
+        P2        
+    </p>
+    <p>
+        P3        
+    </p>
+    <p>
+        P4        
+    </p>
+</div>
+</body>
+</html>
