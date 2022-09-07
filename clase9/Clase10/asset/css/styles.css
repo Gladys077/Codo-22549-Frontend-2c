@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .container{
     display: block;
     background-color: aqua;
@@ -21,8 +25,9 @@
     flex-direction: column;
     width: 100%;
     height: 250px;
-    flex-wrap: wrap /*por defecto viene no-wrap, significa que si el tamaño supera el tamaño del contenedor, entonces se achica*/
+    flex-wrap: wrap; /*por defecto viene no-wrap, significa que si el tamaño supera el tamaño del contenedor, entonces se achica*/
     align-items: center; /*flex-end, flex-start*/
+
 }
 
 .container-flex div{
@@ -31,6 +36,13 @@
     width: 100px;
     height: 100px;
     background-color: yellowgreen;
+    text-align: center;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*media query, sirve para cambiar estilos en determinads resoluciones*/
@@ -55,8 +67,13 @@ section {
 }
 
 .context-text{
-    padding: 50px;
+    padding: 5px;
     margin: 10px;
+}
+
+section {
+    height: 650px;
+    display: flex;
 }
 
 section img {
@@ -69,20 +86,30 @@ html {
     scroll-behavior: smooth; /*para que sea más suave*/
 }
 
-/*aplico los colores: gradient*/
-section:first-child 
-background-image: 
+/*aplico los colores: webgradients.com*/
+section:first-child {
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
 
+section:nth-child(2){
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+section:last-child{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+/*cambio para que se vea como un boton*/
 section a {
     display: inline-block;
-    width: 70px;
+    width: 100px;
     height: 30px;
-    background-color: green;
+    background-color: rgb(116, 3, 157);
     color: white;
     text-decoration: none;
     border-radius: 10px;
     text-align: center;
-    line-height: 25px;
+    line-height: 27px;
+    padding: 5px;
 }
 
 section a:hover {
@@ -92,8 +119,9 @@ section a:hover {
 section a:active {
     opacity: 0.5;
 }
-@media screen and (max-width: 100px){
+@media screen and (max-width: 1000px){
     section {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
