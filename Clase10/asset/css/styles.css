@@ -1,3 +1,4 @@
+/*
 * {
     margin: 0;
 }
@@ -14,6 +15,7 @@
     height: 100px;
     background-color: beige;
 }
+*/
 
 /*FLEX*/
 .container-flex {
@@ -27,8 +29,8 @@
     height: 250px;
     flex-wrap: wrap; /*por defecto viene no-wrap, significa que si el tamaño supera el tamaño del contenedor, entonces se achica*/
     align-items: center; /*flex-end, flex-start*/
-
 }
+
 
 .container-flex div{
     margin: 2px;
@@ -52,6 +54,7 @@
     }
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -66,14 +69,9 @@ section {
     align-items: center;
 }
 
-.context-text{
+.content-text{
     padding: 5px;
     margin: 10px;
-}
-
-section {
-    height: 650px;
-    display: flex;
 }
 
 section img {
@@ -88,23 +86,21 @@ html {
 
 /*aplico los colores: webgradients.com*/
 section:first-child {
-background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
-
-section:nth-child(2){
-    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+section:nth-child(2) {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
-
-section:last-child{
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+section:last-child {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 /*cambio para que se vea como un boton*/
 section a {
     display: inline-block;
     width: 100px;
     height: 30px;
-    background-color: rgb(116, 3, 157);
-    color: white;
+    background-color: rgb(249, 249, 250);
+    color: rgb(6, 0, 0);
     text-decoration: none;
     border-radius: 10px;
     text-align: center;
@@ -114,6 +110,8 @@ section a {
 
 section a:hover {
     font-weight: bolder;
+    background-color: black;
+    color: white;
 }
 
 section a:active {
