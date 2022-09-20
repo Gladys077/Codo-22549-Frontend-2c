@@ -57,19 +57,20 @@ h3 {
 }
 
 
+.bordeBlanco {
+    border-right: 1px solid white;
+}
+    
+
 section3 {
-    max-height: 50px;
+    max-width: 100vmax;
 }
-.flex-items {
-    background-color: rgb(80, 79, 79);
+.blanco {
     color: white;
-    width: 50%;
-    overflow: hidden;
 }
-.fotoIzq {
-    /* como hago que la imagen quede bien?? */
-    object-fit: scale-down; 
-}
-.txtDer {
-    padding: 15px;
+
+@media screen and (max-width: 600px) {
+    .container-flex {
+        flex-direction: column;
+    }
 }
