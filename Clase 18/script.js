@@ -9,8 +9,12 @@ function add() {
     const isValid = validateKey(clave);
 
     if (!isValid) {
+        document.getElementById('clave').className ='texto-vacio' ;
+
         alert('Debe completar la clave');
         return;
+    }else{
+        document.getElementById('clave').className ='' ;
     }
 
     //pasa las validaciones!
@@ -22,15 +26,20 @@ function add() {
 }
 
 function renderKeyByDOM() {
+
+    //limpiar div que contiene ul
+    document.getElementById('claves').innerHTML = '';
+
     const list = findKeys();
     //crear un <ul>
     const ul = document.createElement('ul');
+
     ul.id = 'clavesUl';
     ul.className = 'classUl';
-
+    
     //agregar al div el hijo: ul
     list.appendChild(ul);
-
+    
     //crear los <li> en base a el array de clave y los agrego
     //al <ul>
     for(let clave of claves) {
@@ -63,6 +72,10 @@ function addToList(clave) {
     claves.push(clave);
 }
 
+function clearList() {
+    claves = [];    
+}
+
 function getKey() {
     return document.getElementById('clave').value;
 }
@@ -73,21 +86,15 @@ function findKeys() {
 
 btnAdd.addEventListener('click', add);
 
-/*
-<!--  Solucion ricardo-->
-function addToList(clave){
-    claves.push(clave);
-    mostrar(claves);
-    
+function limpiar() {
+
+    //vaciar la lista
+    clearList();
+
+    //capturar ul y limpiar la lista
+    document.getElementById('claves').innerHTML = '';
 }
 
-function mostrar(array){
-    array.forEach(el => {
-        document.getElementById('claves').innerHTML = el
-    })
-}
-Solucion Juan Silva
-claves.forEach(clave=>{
-    list.innerHTML+=`<li>${clave}</li>`
-})*/
-
+//capturo el boton de limpiar
+const boton = document.getElementById('limpiar');
+boton.addEventListener('click',limpiar);
