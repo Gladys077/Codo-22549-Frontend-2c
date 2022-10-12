@@ -73,12 +73,14 @@ function addToList(clave) {
 }
 
 function clearList() {
-    claves = [];    
+    while(claves.length > 0){
+        claves.pop(); 
+    }
 }
 
-function getKey() {
-    return document.getElementById('clave').value;
-}
+// function getKey() {
+//     return document.getElementById('clave').value;
+// }
 
 function findKeys() {
     return document.getElementById('claves');
