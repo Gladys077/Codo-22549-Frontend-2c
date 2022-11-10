@@ -37,16 +37,6 @@ h3 {
     justify-content: center;
 }
 
-@media (min-width: 768px) {
-.row-cols-md-2>* {
-    flex: 0 0 auto;
-    width: 30%;
-}
-.row-cols-lg-3>* {
-    flex: 0 0 auto;
-    width: 25%;
-}
-}
 
 .bordeBlanco {
     border-right: 1px solid white; 
@@ -69,7 +59,6 @@ h3 {
     text-align: center;
 }
 .form {
-    text-align: center;
     width: 60%;
 }
 .form-control {
@@ -78,6 +67,30 @@ h3 {
 .piedetextarea {
     font-size: small; 
     text-align: left;
+}
+.vtaTicket {
+    width: 100vw;
+    text-align: center;
+}
+.ticket {
+    width: 248px; 
+    height: 200px; 
+    margin: 3px;
+    border: 2px solid; 
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;  
+}
+.alert {
+    margin-left: 12px;
+    margin-right: 20px;
+    width: 97%;
+    margin-top: 35px;
+    font-size: 1.2rem;
+}
+.claro {
+    background-color: rgb(128, 209, 5);
 }
 .bg-footer {
     background-color: rgb(3, 65, 64);
@@ -96,6 +109,17 @@ a.nav-link:hover{
     align-items: center;
 }
    
+@media (min-width: 768px) {
+    .row-cols-md-2>* {
+        flex: 0 0 auto;
+        width: 30%;
+    }
+    .row-cols-lg-3>* {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 978px) {
     .row-cols-md-2>* {
         flex: 0 0 auto;
